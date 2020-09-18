@@ -6,6 +6,12 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
+        stage('Starting minikube') {
+            steps {
+                sh '''minikube start
+                      kubectl get pods'''
+            }
+        }
     }
 }
 
