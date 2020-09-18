@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Starting minikube') {
             steps {
-                sh '''minikube start
+                sh '''/usr/local/bin/minikube start
                       kubectl get pods'''
             }
         }
